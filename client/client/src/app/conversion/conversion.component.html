@@ -1,0 +1,10 @@
+<app-timestamp></app-timestamp>
+<app-conversion-list *ngFor='let c of conversionList'
+                     [conversion]="c"
+                     (refreshListEvent)="handleListRefresh()"
+>
+</app-conversion-list>
+<footer class="alert-warning border-top border-dark">
+    <a href="/create" class="btn btn-primary m-2">Create a Conversion</a>
+    <button type='button' class="btn btn-danger m-2" (click)="deleteAll()">Clear Conversion List</button>
+</footer>
